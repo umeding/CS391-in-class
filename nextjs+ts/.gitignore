@@ -1,0 +1,17 @@
+*.zip
+
+notes.md
+.vscode
+_archive
+
+build
+node_modules
+coverage
+
+.next
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
