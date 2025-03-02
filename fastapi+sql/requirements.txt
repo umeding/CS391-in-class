@@ -1,0 +1,6 @@
+fastapi
+sqlalchemy
+load_dotenv
+PyJWT
+bcrypt
+uvicorn
