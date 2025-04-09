@@ -1,12 +1,12 @@
 # JEST In-Class Exercise / Tutorial
 
 
-## Prerequisites:
+## Prerequisites (in general):
 
-* Basic understanding of React functional components and props.
+* `vscode` installed and runnning
 * A working React or Next.js project environment (e.g., created with
-  create-react-app or create-next-app).
-* Node.js and npm/yarn installed.
+  `create-react-app` or `create-next-app`).
+* `Node.js` and `npm` or `yarn` installed.
 * Jest and `@testing-library/react` installed and configured (usually included
   by default in newer versions of the above tools). If not, a quick install
   might be needed, along with potential Jest configuration:
@@ -15,17 +15,15 @@
 npm install --save-dev jest @testing-library/react @testing-library/jest-dom @testing-library/user-event
 ```
 
+> #
+> # NOTE: The test project is ALREADY set up with all the libraries
+> # Check the `package.json` file
+> #
 
-Exercise Structure:
 
-1. Setup & Introduction (5 mins)
-1. Task 1: Testing Basic Rendering (10 mins)
-1. Task 2: Testing Props (10 mins)
-1. Wrap-up & Discussion (5 mins)
+## Setup and the component to test 
 
-## Step 1: Setup & The Component to Test (5 mins)
-
-* Navigate to your React/Next.js project directory in your terminal.
+* Navigate to the project directory (`some-app`) and bring up `vscode`
 * Create a new component file named src/components/WelcomeMessage.js (adjust
   path if your structure differs).
 * Paste the following code into `WelcomeMessage.js`:
@@ -53,7 +51,9 @@ export default WelcomeMessage;
 // src/components/WelcomeMessage.test.js
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom'; // Provides helpful matchers like .toBeInTheDocument()
+
+// Provides helpful matchers like .toBeInTheDocument():
+import '@testing-library/jest-dom'; 
 import WelcomeMessage from './WelcomeMessage';
 
 describe('WelcomeMessage Component', () => {
@@ -61,7 +61,7 @@ describe('WelcomeMessage Component', () => {
 });
 ```
 
-## Step 2: Task 1 - Testing Basic Rendering
+## Task 1: Testing Basic Rendering
 
 Inside the describe block in `WelcomeMessage.test.js`, add the following test
 case:
@@ -92,7 +92,7 @@ it('renders the default welcome message when no userName is provided', () => {
 * Verify that the test passes. If it fails, debug common issues (typos in text,
   component not importing correctly).
 
-## Step 3: Task 2 - Testing Props
+## Task 2: Testing Props
 
 Add a second test case inside the describe block:
 

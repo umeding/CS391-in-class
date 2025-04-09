@@ -1,12 +1,13 @@
-# JEST In-Class Exercise / Tutorial
+# PYTHON In-Class Exercise / Tutorial
 
 ## Prerequisites:
 
 * Python 3 installed on laptop
 * `pip` available in the terminal/command prompt.
 
-## Step 1: Setup code
+## Setup the code
 
+* Bring up `vscode`
 * Create a new project folder (e.g., `pytest_exercise`).
 * Open a terminal or command prompt, navigate into this folder
 * Install pytest: Run `pip install pytest`
@@ -45,7 +46,9 @@ from operations import simple_greet, power  # Import the functions to test
 # Tests will go here
 ```
 
-## Step 2: Task 1 - Testing `simple_greet` - "the happy path"
+## Task 1: Testing `simple_greet` - "the happy path"
+
+NOTE: The "happy path" tests __working__ code / functions.
 
 In `test_operations.py`, add the following test function:
 
@@ -71,7 +74,7 @@ def test_simple_greet_with_valid_name():
 * Verify that `pytest` finds and runs the test, and that it passes (it should
   show 1 passed). If it fails, debug the test or the function code.
 
-## Step 3: Task 2 - Testing Edge Cases & Expected Errors
+## Task 2: Testing Edge Cases and Expected Errors
 
 Add the following test functions to test_operations.py:
 
