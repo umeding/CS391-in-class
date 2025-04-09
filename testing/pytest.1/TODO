@@ -1,0 +1,8 @@
+  assert add("2", 2) == 4
+  # assert add("text", 2) == 4
+
+  with pytest.raises(Exception):
+    add("text", 2)
+
+show how to run different test functions for different situations.
+
